@@ -1,6 +1,6 @@
 <?php  
 
-
+exit; die();
 
 require_once('include/config.php'); 
 
