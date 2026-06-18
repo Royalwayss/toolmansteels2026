@@ -9,13 +9,16 @@ if(isset($_GET['mode']) && $_GET['mode'] !=''){
 	
 	
 	$title = $_POST['title'];
+	$title = mysqli_real_escape_string($conn, $title); 
 	$blog_url = $_POST['blog_url'];
 	$short_description = trim($_POST['short_description']);
 	$short_description = mysqli_real_escape_string($conn, $short_description); 
 	$blog_content = trim($_POST['blog_content']);
-	$blog_content = mysqli_real_escape_string($conn, $blog_content); 
+	
 	$meta_title =$_POST['meta_title'];
+	$meta_title = mysqli_real_escape_string($conn, $meta_title); 
 	$meta_description =$_POST['meta_description'];
+	$meta_description = mysqli_real_escape_string($conn, $meta_description); 
 	$meta_keywords =$_POST['meta_keywords'];
 	$blog_sort =$_POST['blog_sort'];
 	$read_time =$_POST['read_time'];
@@ -30,7 +33,7 @@ if(isset($_GET['mode']) && $_GET['mode'] !=''){
 	
 	
 	if($_GET['mode'] == 'update' && $_GET['id'] != '' && $title !='' && $blog_url !='' ){
-		
+		$blog_content = base64_encode($blog_content);
 		$update_query  = "UPDATE  blogs SET title = '".$title."', blog_url = '".$blog_url."',short_description = '".$short_description."',blog_content = '".$blog_content."',blog_sort = '".$blog_sort."',read_time = '".$read_time."',meta_title = '".$meta_title."',meta_description = '".$meta_description."',meta_keywords = '".$meta_keywords."',published_date = '".$published_date."',status = '".$status."' WHERE id = ".$_GET['id']." "; 
 		mysqli_query($conn,$update_query);
 		if(isset($_FILES["file"]["name"])){

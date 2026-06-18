@@ -212,7 +212,13 @@
 						<div class="row">
 						<div class="col-md-12">
 							<label for="editor">Content:</label>
-							<textarea id="editor" name="blog_content"><?php if(!empty($id)){ echo $row['blog_content']; } ?></textarea>
+							<textarea id="editor" name="blog_content">
+							<?php if(!empty($id)){ 
+							     $blog_content = base64_decode($row['blog_content']);
+                                 echo $blog_content;
+							} ?>
+							
+							</textarea>
 						</div>
 						</div>
 						

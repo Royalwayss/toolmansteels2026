@@ -94,7 +94,11 @@ include 'include/header.php';
                         <h6><?php echo $blog['title']; ?></h6>
                     </div>
                 </div>
-                <?php echo $blog['blog_content']; ?>
+                <?php 
+				$blog_content = base64_decode($blog['blog_content']);
+				
+				echo $blog_content;
+				?>
 				 <div class="col-12 col-lg-4 d-flex justify-content-end">
                     <div class="contact-card text-center">
                         <p class="mt-3 mb-4">Ready to upgrade? Contact our team today for expert guidance and support.
