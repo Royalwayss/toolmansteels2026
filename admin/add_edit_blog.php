@@ -348,7 +348,7 @@
 			
 			
 			
-			
+			<?php /*
 			
 			$('#title').on('input', function() {
 				var title = $(this).val();
@@ -362,7 +362,7 @@
 
 				 $('#blog_url').val(slug+'.php');
 			
-			});
+			}); */ ?>
 			
 			
 			$('#preview-blog').on('click', function () {
