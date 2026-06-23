@@ -95,9 +95,11 @@ include 'include/header.php';
                     </div>
                 </div>
                 <?php 
-				$blog_content = base64_decode($blog['blog_content']);
+				$blog_content = $blog['blog_content'];
+				$blog_content = base64_decode($blog_content);
 				
 				echo $blog_content;
+				//include('blog_content.php');
 				?>
 				 <div class="col-12 col-lg-4 d-flex justify-content-end">
                     <div class="contact-card text-center">

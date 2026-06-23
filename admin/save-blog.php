@@ -39,9 +39,10 @@ if(isset($_GET['mode']) && $_GET['mode'] !=''){
 		if(isset($_FILES["file"]["name"])){
 			
 						$target_dir = "../assets/img/blogs/";
-						$target_file = $target_dir . rand(11111,99999).'-'.basename($_FILES["file"]["name"]);
+						$file_name = rand(11111,99999).'-'.basename($_FILES["file"]["name"]);
+						$target_file = $target_dir . $file_name;
 						if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-							$file_name = $_FILES["file"]["name"];
+							
 							$update_query  = "UPDATE blogs SET image = '".$file_name."' WHERE id = ".$_GET['id']." ";
 							
 							mysqli_query($conn,$update_query);
