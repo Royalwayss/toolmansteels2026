@@ -272,8 +272,42 @@ width: 100%;
 	.select2-container--default .select2-selection--single {
 		border: none!important;
 	}
-	  </style>
-      <?php if($pageName == 'index.php'){ ?>
+	  
+   .faq-section .accordion-item {
+     border: 1px solid #dee2e6;
+     margin-bottom: 10px;
+   }
+
+   .faq-section .accordion-button,
+   .faq-section .accordion-body {
+     font-family: "Mulish", sans-serif;
+     font-size: 16px;
+   }
+
+   .faq-section .accordion-button {
+     color: #106d91;
+     font-weight: 600;
+   }
+
+   .faq-section .accordion-button:not(.collapsed) {
+     background-color: #f5f9fb;
+     color: #106d91;
+     box-shadow: none;
+   }
+
+   .faq-section .accordion-button:focus {
+     box-shadow: none;
+   }
+ </style>
+      
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  <?php if($pageName == 'index.php'){ ?>
       <script type="application/ld+json">
          {
          
