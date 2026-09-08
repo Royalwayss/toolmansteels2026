@@ -14,7 +14,7 @@
 
 	$faqs = [];
 	
-	$faq_sql = "SELECT * FROM `faqs` WHERE `slug` = 'dc-53-steel-grade' order by id asc";
+	$faq_sql = "SELECT * FROM `faqs` WHERE `slug` = '".$productSlug."' order by id asc";
 	
 	$faq_result = $conn->query($faq_sql); 
     
