@@ -3,38 +3,226 @@
    <?php 
       require_once('include/config.php');
       $pageName = basename($_SERVER['PHP_SELF']); 
+      $SITE_URL = 'https://www.toolmansteels.com';
       
       $products = [
-      
-                       ['page'=>'product-h13.php','name'=>'H13 / DIN 1.2344 / AISI H13 Steel Grade'],
-                       ['page'=>'product-h11.php','name'=>'H11 / DIN 1.2343 / AISI H11 Steel Grade'],
-                       ['page'=>'product-h12.php','name'=>'H12 / DIN 1.2606 / AISI H12 Steel Grade'],
-                       ['page'=>'product-h10.php','name'=>'H10 / DIN 1.12365 / AISI H10 Steel Grade'],
-                       ['page'=>'product-h21.php','name'=>'H21, / DIN 1.2581 / AISI H21 Steel Grade'],
-                       ['page'=>'product-db6.php','name'=>'DB6 / DIN 1.12714 / AISI L6 Steel Grade'],
-                       ['page'=>'product-1.2367.php','name'=>'1.2367 / DIN 1.2367 / AISI 1.2367 Steel Grade: Steel Grade'],
-                       ['page'=>'product-d2.php','name'=>'D2 / DIN 1.2379 / AISI D2 Steel Grade'],
-                       ['page'=>'product-d3.php','name'=>'D3 / DIN 1.2080 / AISI D3 Steel Grade'],
-                       ['page'=>'product-o1.php','name'=>'O1 / DIN 1.2510 / AISI O1 Steel Grade'],
-                       ['page'=>'product-S1.php','name'=>'S1 / DIN 1.2550 / AISI S1 Steel Grade'],
-                       ['page'=>'product-A2.php','name'=>'A2 / DIN 1.12363 / AISI A2 Steel Grade'],
-                       ['page'=>'product-1.2767.php','name'=>'1.2767 / DIN 1.12767 / 1.2767 Steel Grade'],
-                       ['page'=>'product-D2-1.2601.php','name'=>'D2 1.2601 / DIN 1.2601 / D2 1.2601 Steel Grade'],
-                       ['page'=>'product-S7-1.2357.php','name'=>'S7 1.2357 / DIN 1.2357 / AISI S7 Steel Grade'],
-                       ['page'=>'product-A8-M.php','name'=>'A8 M / AISI A8 MOD Steel Grade'],
-                       ['page'=>'product-dc-53.php','name'=>'DC 53 Steel Grade'],
-                       ['page'=>'product-m2.php','name'=>'M2 / DIN 1.3343 / AISI M2 Steel Grade'],
-                       ['page'=>'product-m3.php','name'=>'M3 / DIN 1.3344 / AISI M3 Steel Grade'],
-                       ['page'=>'product-m7.php','name'=>'M7 / DIN 1.3348 / AISI M7 Steel Grade'],
-                       ['page'=>'product-m35.php','name'=>'M35 / DIN 1.3243 / AISI M35 Steel Grade'],
-                       ['page'=>'product-m42.php','name'=>'M42 / DIN 1.3247 / AISI M42 Steel Grade'],
-                       ['page'=>'product-abc-3.php','name'=>'ABC III / DIN 1.3333 / AISI ABC III Steel Grade'],
-                       ['page'=>'product-t1.php','name'=>'T1 / DIN 1.3355 / AISI T1 Steel Grade'],
-                       ['page'=>'product-t4.php','name'=>'T4 / DIN 1.3255 / AISI T4 Steel Grade'],
-                       ['page'=>'product-t15.php','name'=>'T15 / DIN 1.3202 / AISI T15 Steel Grade'],
-                       ['page'=>'product-t42.php','name'=>'T42 / DIN 1.3207 / AISI T42 Steel Grade']
-                      
-      
+
+                       [
+                          'page'=>'product-h13.php',
+                          'name'=>'H13 / DIN 1.2344 / AISI H13 Steel Grade',
+                          'slug'=>'h13-din-1.2344-aisi-h13-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-h11.php',
+                          'name'=>'H11 / DIN 1.2343 / AISI H11 Steel Grade',
+                          'slug'=>'h11-din-1.2343-aisi-h11-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-h12.php',
+                          'name'=>'H12 / DIN 1.2606 / AISI H12 Steel Grade',
+                          'slug'=>'h12-din-1.2606-aisi-h12-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-h10.php',
+                          'name'=>'H10 / DIN 1.12365 / AISI H10 Steel Grade',
+                          'slug'=>'h10-din-1.12365-aisi-h10-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-h21.php',
+                          'name'=>'H21, / DIN 1.2581 / AISI H21 Steel Grade',
+                          'slug'=>'h21-din-1.2581-aisi-h21-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-db6.php',
+                          'name'=>'DB6 / DIN 1.12714 / AISI L6 Steel Grade',
+                          'slug'=>'db6-din-1.12714-aisi-l6-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-1.2367.php',
+                          'name'=>'1.2367 / DIN 1.2367 / AISI 1.2367 Steel Grade: Steel Grade',
+                          'slug'=>'1.2367-din-1.2367-aisi-1.2367-steel-grade-steel-grade',
+                          'category'=>'Hot Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-d2.php',
+                          'name'=>'D2 / DIN 1.2379 / AISI D2 Steel Grade',
+                          'slug'=>'d2-din-1.2379-aisi-d2-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-d3.php',
+                          'name'=>'D3 / DIN 1.2080 / AISI D3 Steel Grade',
+                          'slug'=>'d3-din-1.2080-aisi-d3-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-o1.php',
+                          'name'=>'O1 / DIN 1.2510 / AISI O1 Steel Grade',
+                          'slug'=>'o1-din-1.2510-aisi-o1-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-S1.php',
+                          'name'=>'S1 / DIN 1.2550 / AISI S1 Steel Grade',
+                          'slug'=>'s1-din-1.2550-aisi-s1-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-A2.php',
+                          'name'=>'A2 / DIN 1.12363 / AISI A2 Steel Grade',
+                          'slug'=>'a2-din-1.12363-aisi-a2-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-1.2767.php',
+                          'name'=>'1.2767 / DIN 1.12767 / 1.2767 Steel Grade',
+                          'slug'=>'1.2767-din-1.12767-1.2767-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-D2-1.2601.php',
+                          'name'=>'D2 1.2601 / DIN 1.2601 / D2 1.2601 Steel Grade',
+                          'slug'=>'d2-1.2601-din-1.2601-d2-1.2601-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-S7-1.2357.php',
+                          'name'=>'S7 1.2357 / DIN 1.2357 / AISI S7 Steel Grade',
+                          'slug'=>'s7-1.2357-din-1.2357-aisi-s7-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-A8-M.php',
+                          'name'=>'A8 M / AISI A8 MOD Steel Grade',
+                          'slug'=>'a8-m-aisi-a8-mod-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-dc-53.php',
+                          'name'=>'DC 53 Steel Grade',
+                          'slug'=>'dc-53-steel-grade',
+                          'category'=>'Cold Work Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-m2.php',
+                          'name'=>'M2 / DIN 1.3343 / AISI M2 Steel Grade',
+                          'slug'=>'m2-din-1.3343-aisi-m2-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-m3.php',
+                          'name'=>'M3 / DIN 1.3344 / AISI M3 Steel Grade',
+                          'slug'=>'m3-din-1.3344-aisi-m3-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-m7.php',
+                          'name'=>'M7 / DIN 1.3348 / AISI M7 Steel Grade',
+                          'slug'=>'m7-din-1.3348-aisi-m7-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-m35.php',
+                          'name'=>'M35 / DIN 1.3243 / AISI M35 Steel Grade',
+                          'slug'=>'m35-din-1.3243-aisi-m35-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-m42.php',
+                          'name'=>'M42 / DIN 1.3247 / AISI M42 Steel Grade',
+                          'slug'=>'m42-din-1.3247-aisi-m42-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-abc-3.php',
+                          'name'=>'ABC III / DIN 1.3333 / AISI ABC III Steel Grade',
+                          'slug'=>'abc-iii-din-1.3333-aisi-abc-iii-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-t1.php',
+                          'name'=>'T1 / DIN 1.3355 / AISI T1 Steel Grade',
+                          'slug'=>'t1-din-1.3355-aisi-t1-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-t4.php',
+                          'name'=>'T4 / DIN 1.3255 / AISI T4 Steel Grade',
+                          'slug'=>'t4-din-1.3255-aisi-t4-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-t15.php',
+                          'name'=>'T15 / DIN 1.3202 / AISI T15 Steel Grade',
+                          'slug'=>'t15-din-1.3202-aisi-t15-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
+                       [
+                          'page'=>'product-t42.php',
+                          'name'=>'T42 / DIN 1.3207 / AISI T42 Steel Grade',
+                          'slug'=>'t42-din-1.3207-aisi-t42-steel-grade',
+                          'category'=>'High Speed Steels',
+                          'image'=>'assets/img/banners/product.jpg'
+                       ],
+
       ];
       $product_pages = array_column($products, 'page');
       
@@ -44,8 +232,140 @@
       	$product_list[$pro['page']] =$pro['name'];
       }
       
+      // Static pages: title/description are echoed from the elseif chain
+      // below exactly as before. This array only supplies what the
+      // AboutPage/ContactPage/etc + BreadcrumbList schema needs, keyed
+      // by the same $pageName values used throughout this file.
+      $static_pages = [
+         'about.php' => [
+            'type' => 'AboutPage',
+            'name' => 'About - Toolman - Special Steel Manufacturer in India',
+            'description' => 'Toolman specializes in the manufacturing of high quality special steel grades of high speed steel, tool and die steel, mould steel and alloy steel.',
+            'breadcrumb' => 'About Us'
+         ],
+         'timeline.php' => [
+            'type' => 'TimelinePage',
+            'name' => 'Our Journey - Toolman',
+            'description' => "Experience Toolman's transformative journey. Our growth story has been fueled by a relentless pursuit of excellence and innovation. We are proud to be at the forefront of the steel industry, offering end to end solutions that add value to our customers operations.",
+            'breadcrumb' => 'Our Journey'
+         ],
+         'products.php' => [
+            'type' => 'ProductsPage',
+            'name' => 'Hot Work Steels, Cold Work Steels & High Speed Steels Products Manufacturer, Exporters & Suppliers in India',
+            'description' => 'Toolman is one of the leading hot work steels, cold work steels & high speed steels products manufacturer, exporters & suppliers in India.',
+            'breadcrumb' => 'Products'
+         ],
+         'melting-casting.php' => [
+            'type' => 'MeltingCastingPage',
+            'name' => 'Melting, Casting And Remelting',
+            'description' => 'Discover our state-of-the-art melting, casting, and remelting processes.',
+            'breadcrumb' => 'Melting, Casting & Remelting'
+         ],
+         'forging.php' => [
+            'type' => 'ForgingPage',
+            'name' => 'Best Forging Industry & Solution - Infrastructure - Toolman',
+            'description' => 'Experience the legacy of Toolman. Toolman has over 67 years of experience in forging high-quality steel grades. Our advanced techniques enable us to produce forgings of various sizes and specifications including rounds, squares, flats, blanks and upset forging.',
+            'breadcrumb' => 'Forging'
+         ],
+         'rolling-mill.php' => [
+            'type' => 'RollingMillPage',
+            'name' => 'Best Rolling Mill Solutions - Infrastructure - Toolman',
+            'description' => "Discover Toolman's cutting-edge rolling mill technology. Our advanced infrastructure ensures precision and efficiency in every process.",
+            'breadcrumb' => 'Rolling Mill'
+         ],
+         'heat-treatment.php' => [
+            'type' => 'HeatTreatmentPage',
+            'name' => 'Heat Treatment Solutions - Toolman',
+            'description' => 'Toolman offers a comprehensive range of heat treatment. Our state-of-the-art facilities ensure precise and consistent results.',
+            'breadcrumb' => 'Heat Treatment'
+         ],
+         'machining.php' => [
+            'type' => 'MachiningPage',
+            'name' => 'Precision Machining Services - Toolman',
+            'description' => "Toolman's advanced machining capabilities deliver superior quality and accuracy.",
+            'breadcrumb' => 'Machining'
+         ],
+         'production-flow-chart.php' => [
+            'type' => 'ProductionFlowChartPage',
+            'name' => 'Understanding Our Production Process - Production Flow Chart - Toolman',
+            'description' => 'Gain insights into our efficient production process. Explore our detailed flowchart to understand how we deliver quality products.',
+            'breadcrumb' => 'Production Flow Chart'
+         ],
+         'export.php' => [
+            'type' => 'ExportPage',
+            'name' => 'Export - Global Market, USA, Japan, China, and Europe - Toolman',
+            'description' => 'Toolman - Your global partner for high-quality products. We are exporting to the USA, Japan, China, Europe, Turkey and other countries.',
+            'breadcrumb' => 'Export'
+         ],
+         'events.php' => [
+            'type' => 'EventsPage',
+            'name' => 'Events - Industry trends and Innovations - Toolman',
+            'description' => 'Stay updated on the latest industry trends and innovations. Discover where you can meet the Toolman team at upcoming events. Also, view our past events.',
+            'breadcrumb' => 'Events'
+         ],
+         'career.php' => [
+            'type' => 'CareerPage',
+            'name' => 'Jobs and Careers - Join Our Team and Shape the Future of Steel',
+            'description' => 'Explore exciting career opportunities at Toolman. If you are looking for jobs in steel industry then apply at Toolman.',
+            'breadcrumb' => 'Careers'
+         ],
+         'contact.php' => [
+            'type' => 'ContactPage',
+            'name' => 'Contact - Toolman',
+            'description' => 'Toolman is one of the leading hot work steels, cold work steels & high speed steels manufacturer, exporters and suppliers in India. If you have any query related to our products or services then you can contact us at any time.',
+            'breadcrumb' => 'Contact Us'
+         ],
+         'blog.php' => [
+            'type' => 'BlogPage',
+            'name' => 'Toolman Steels Blog - High-Speed, Hot/Cold Work & PM Steel Insights',
+            'description' => 'Explore the Toolman Steels blog for expert insights on high-speed steel, hot work steel, cold work steel, and PM steel. Stay informed about industry trends and product applications.',
+            'breadcrumb' => 'Blog'
+         ]
+      ];
       
-     
+      // Reads the product page's own source and returns the first <img> src
+      // found inside the class="products-details-list" section, so the
+      // schema image always matches whatever picture is actually shown
+      // at the top of that product's page.
+      function get_product_page_image($pageFile){
+      	static $cache = [];
+      	if(array_key_exists($pageFile, $cache)){
+      		return $cache[$pageFile];
+      	}
+      	$image = null;
+      	if(file_exists($pageFile)){
+      		$content = file_get_contents($pageFile);
+      		$pos = strpos($content, 'products-details-list');
+      		if($pos !== false){
+      			$snippet = substr($content, $pos);
+      			if(preg_match('/<img\b[^>]*?src=["\']([^"\']+)["\']/i', $snippet, $m)){
+      				$image = $m[1];
+      			}
+      		}
+      	}
+      	$cache[$pageFile] = $image;
+      	return $image;
+      }
+      
+      // For non-product pages: returns the first <img> src found anywhere
+      // in the page's own source (this is normally the top banner image),
+      // so og:image/twitter:image show a real picture from that page
+      // instead of a placeholder.
+      function get_page_banner_image($pageFile){
+      	static $cache = [];
+      	if(array_key_exists($pageFile, $cache)){
+      		return $cache[$pageFile];
+      	}
+      	$image = null;
+      	if(file_exists($pageFile)){
+      		$content = file_get_contents($pageFile);
+      		if(preg_match('/<img\b[^>]*?src=["\']([^"\']+)["\']/i', $content, $m)){
+      			$image = $m[1];
+      		}
+      	}
+      	$cache[$pageFile] = $image;
+      	return $image;
+      }
       
       ?>
    <head>
@@ -66,6 +386,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta property="og:site_name" content="Toolman Special Steels"/>
+      <?php ob_start(); ?>
       <?php if($pageName == 'index.php'){ ?>
       <title>High Speed Steel Manufacturers - Special Steel, Hot Work Steel, PM Steel, Die Blocks, Cold Work Steel Manufacturer, Exporters & Suppliers in India</title>
       <meta name="description" content="Toolman is one of the leading high speed steel manufacturer, exporters and suppliers in India. Get a quote for special steel, hot work steel PM steel, die block, cold work steel & knives making steel. We are specialize in h10, h11, h12, h13, h21, db6, m35, m42, t1, m2, m35, m42, t1, din 2379, din 2080, din 2738, din 2311, din 2379, din 2080, din 2738, din 2311, din 2379, aisi h11,aisi h21,aisi h12, aisi m2, aisi m35, aisi m42, aisi t1, aisi m2, aisi m35, aisi m42, din 2080, din 2311, din 2714, din 2344, din 2343, din 2581, din 2365, din 2606, din 2714 , din 2344, din 2343, din 2581, din 2365, din 2606, din 3343, din 3243, din 3247, din 3355, din 3343, din 3243, din 3247, din 3355 and all types of high speed steel.">
@@ -216,14 +537,273 @@
 	  
 	  $GET_PRODUCT_NAME = $product_list[$pageName];
 	  
+	  $products_by_page = [];
+	  foreach($products as $pro){
+	  	$products_by_page[$pro['page']] = $pro;
+	  }
+	  $GET_PRODUCT = $products_by_page[$pageName];
+	  
+	  if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){   
+	       $page_link = "https://";   
+	  }else{  
+	       $page_link = "http://";   
+	  }
+	  $page_link.= $_SERVER['HTTP_HOST'];   
+	  $page_link.= $_SERVER['REQUEST_URI'];   
+
+	  $productSlug = basename(trim($page_link, '/'));
+
+	  $faqs = [];
+	  
+	  $faq_sql = "SELECT * FROM `faqs` WHERE `slug` = '".$productSlug."' order by id asc";
+	  
+	  $faq_result = $conn->query($faq_sql); 
+	  
+	  if ($faq_result->num_rows > 0) { 
+	  
+	      while ($faq_row = $faq_result->fetch_assoc()) { 
+	      
+	          $faqs[] = $faq_row;
+	      }
+	  }
+	  
+	  $PRODUCT_URL = $SITE_URL . '/' . $productSlug;
+	  $PRODUCT_DESCRIPTION = 'Toolman Special Steels is manufacturer & exporter in USA, Europe, Australia & Asia of high quality '.$GET_PRODUCT_NAME.'. We are one of the best hot work steel, cold work steel and high speed steel manufacturer, exporters & suppliers in India. Get a quote now.';
+	  
+	  $PRODUCT_IMAGE = get_product_page_image($pageName);
+	  if(empty($PRODUCT_IMAGE)){
+	  	$PRODUCT_IMAGE = $GET_PRODUCT['image'];
+	  }
+	  
 	  ?>
       
 	  
 	   <title>Toolman Special Steels -  <?php echo $GET_PRODUCT_NAME; ?> Exporters & Suppliers in India - USA, Europe, Australia & Asia</title>
-      <meta name="description" content="Toolman Special Steels is manufacturer & exporter in USA, Europe, Australia & Asia of high quality <?php echo $GET_PRODUCT_NAME; ?>. We are one of the best hot work steel, cold work steel and high speed steel manufacturer, exporters & suppliers in India. Get a quote now.">
+      <meta name="description" content="<?php echo $PRODUCT_DESCRIPTION; ?>">
       
+      <?php $PRODUCT_OG_TITLE = $GET_PRODUCT['name'] . ' - Toolman Special Steels'; ?>
+      <?php $PRODUCT_OG_IMAGE = $SITE_URL . '/' . ltrim($PRODUCT_IMAGE, '/'); ?>
+
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="product" />
+      <meta property="og:url" content="<?php echo $PRODUCT_URL; ?>" />
+      <meta property="og:title" content="<?php echo $PRODUCT_OG_TITLE; ?>" />
+      <meta property="og:description" content="<?php echo $PRODUCT_DESCRIPTION; ?>" />
+      <meta property="og:image" content="<?php echo $PRODUCT_OG_IMAGE; ?>" />
+      <meta property="og:site_name" content="Toolman Special Steels" />
+
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="<?php echo $PRODUCT_URL; ?>" />
+      <meta name="twitter:title" content="<?php echo $PRODUCT_OG_TITLE; ?>" />
+      <meta name="twitter:description" content="<?php echo $PRODUCT_DESCRIPTION; ?>" />
+      <meta name="twitter:image" content="<?php echo $PRODUCT_OG_IMAGE; ?>" />
+      
+      <?php
+         $schemaGraph = [];
+
+         $schemaGraph[] = [
+            '@type' => 'Product',
+            '@id' => $PRODUCT_URL . '#product',
+            'name' => $GET_PRODUCT['name'],
+            'url' => $PRODUCT_URL,
+            'image' => $SITE_URL . '/' . ltrim($PRODUCT_IMAGE, '/'),
+            'description' => $PRODUCT_DESCRIPTION,
+            'category' => $GET_PRODUCT['category'],
+            'brand' => [
+               '@type' => 'Brand',
+               'name' => 'Toolman Special Steels'
+            ],
+            'manufacturer' => [
+               '@id' => $SITE_URL . '/#organization'
+            ],
+            'offers' => [
+               '@type' => 'AggregateOffer',
+               'priceCurrency' => 'INR',
+               'availability' => 'https://schema.org/InStock',
+               'url' => $PRODUCT_URL,
+               'seller' => [
+                  '@id' => $SITE_URL . '/#organization'
+               ]
+            ]
+         ];
+
+         if(!empty($faqs)){
+            $mainEntity = [];
+            foreach($faqs as $faq){
+               $mainEntity[] = [
+                  '@type' => 'Question',
+                  'name' => strip_tags($faq['question']),
+                  'acceptedAnswer' => [
+                     '@type' => 'Answer',
+                     'text' => strip_tags($faq['answer'])
+                  ]
+               ];
+            }
+            $schemaGraph[] = [
+               '@type' => 'FAQPage',
+               '@id' => $PRODUCT_URL . '#faq',
+               'mainEntity' => $mainEntity
+            ];
+         }
+
+         $schemaGraph[] = [
+            '@type' => 'BreadcrumbList',
+            '@id' => $PRODUCT_URL . '#breadcrumb',
+            'itemListElement' => [
+               [
+                  '@type' => 'ListItem',
+                  'position' => 1,
+                  'name' => 'Home',
+                  'item' => $SITE_URL
+               ],
+               [
+                  '@type' => 'ListItem',
+                  'position' => 2,
+                  'name' => $GET_PRODUCT['category'],
+                  'item' => $SITE_URL
+               ],
+               [
+                  '@type' => 'ListItem',
+                  'position' => 3,
+                  'name' => $GET_PRODUCT['name'],
+                  'item' => $PRODUCT_URL
+               ]
+            ]
+         ];
+
+         $productSchema = [
+            '@context' => 'https://schema.org',
+            '@graph' => $schemaGraph
+         ];
+      ?>
 	  <?php } else{ ?>
       <title>Toolman</title>
+      <?php } ?>
+      <?php
+         $headBufferedOutput = ob_get_clean();
+         echo $headBufferedOutput;
+
+         if(!in_array($pageName, $product_pages)){
+
+            $PAGE_URL = $SITE_URL . '/' . $pageName;
+
+            if(array_key_exists($pageName, $static_pages)){
+               // Curated entry: exact type/name/description/breadcrumb.
+               $staticPage = $static_pages[$pageName];
+               $pageType = $staticPage['type'];
+               $pageTitle = $staticPage['name'];
+               $pageDescription = $staticPage['description'];
+               $pageBreadcrumb = $staticPage['breadcrumb'];
+            } else {
+               // No curated entry for this page: fall back to whatever
+               // <title>/<meta description> this page already output
+               // above, and use the generic "WebPage" type.
+               $pageType = 'WebPage';
+               $pageTitle = $pageName;
+               $pageDescription = '';
+
+               if(preg_match('/<title>(.*?)<\/title>/is', $headBufferedOutput, $titleMatch)){
+                  $extractedTitle = trim(html_entity_decode(strip_tags($titleMatch[1]), ENT_QUOTES));
+                  if($extractedTitle !== ''){
+                     $pageTitle = $extractedTitle;
+                  }
+               }
+               if(preg_match('/<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']\s*\/?>/is', $headBufferedOutput, $descMatch)){
+                  $pageDescription = trim(html_entity_decode($descMatch[1], ENT_QUOTES));
+               }
+               if($pageDescription === ''){
+                  $pageDescription = $pageTitle;
+               }
+
+               $pageBreadcrumb = $pageTitle;
+            }
+
+            // The AboutPage/WebPage + BreadcrumbList @graph is only for
+            // static/content pages — not the homepage (which already has
+            // its own WebSite schema) and not product pages (excluded
+            // above, they have their own Product/FAQPage schema).
+            if($pageName != 'index.php'){
+               $staticGraph = [];
+
+               $staticGraph[] = [
+                  '@type' => $pageType,
+                  '@id' => $PAGE_URL . '#webpage',
+                  'url' => $PAGE_URL,
+                  'name' => $pageTitle,
+                  'description' => $pageDescription,
+                  'publisher' => [
+                     '@id' => $SITE_URL . '/#organization'
+                  ]
+               ];
+
+               $staticGraph[] = [
+                  '@type' => 'BreadcrumbList',
+                  '@id' => $PAGE_URL . '#breadcrumb',
+                  'itemListElement' => [
+                     [
+                        '@type' => 'ListItem',
+                        'position' => 1,
+                        'name' => 'Home',
+                        'item' => $SITE_URL
+                     ],
+                     [
+                        '@type' => 'ListItem',
+                        'position' => 2,
+                        'name' => $pageBreadcrumb,
+                        'item' => $PAGE_URL
+                     ]
+                  ]
+               ];
+
+               $staticSchema = [
+                  '@context' => 'https://schema.org',
+                  '@graph' => $staticGraph
+               ];
+            }
+
+            // Homepage gets the exact copy supplied for it; every other
+            // non-product page reuses the title/description already
+            // resolved above, with a real image pulled from that page's
+            // own markup where possible.
+            if($pageName == 'index.php'){
+               $OG_TYPE = 'website';
+               $OG_TITLE = 'Toolman Special Steels - High Speed & Tool Steel Manufacturer';
+               $OG_DESCRIPTION = 'Leading manufacturer, supplier, and exporter of high-speed steel, hot work steel, cold work steel, die blocks, and PM steel in India.';
+               $OG_IMAGE = $SITE_URL . '/assets/img/logo/tooman-logo.png';
+               $OG_URL = $SITE_URL . '/';
+            } else {
+               $OG_TYPE = 'article';
+               $OG_TITLE = $pageTitle;
+               $OG_DESCRIPTION = $pageDescription;
+               $pageBannerImage = get_page_banner_image($pageName);
+               if(empty($pageBannerImage)){
+                  $pageBannerImage = 'assets/img/logo/tooman-logo.png';
+               }
+               $OG_IMAGE = $SITE_URL . '/' . ltrim($pageBannerImage, '/');
+               $OG_URL = $PAGE_URL;
+            }
+         }
+      ?>
+      <?php if(isset($OG_TYPE)){ ?>
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="<?php echo $OG_TYPE; ?>" />
+      <meta property="og:url" content="<?php echo $OG_URL; ?>" />
+      <meta property="og:title" content="<?php echo $OG_TITLE; ?>" />
+      <meta property="og:description" content="<?php echo $OG_DESCRIPTION; ?>" />
+      <meta property="og:image" content="<?php echo $OG_IMAGE; ?>" />
+      <?php if($pageName == 'index.php'){ ?>
+      <meta property="og:locale" content="en_US" />
+      <?php } else { ?>
+      <meta property="og:site_name" content="Toolman Special Steels" />
+      <?php } ?>
+
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="<?php echo $OG_URL; ?>" />
+      <meta name="twitter:title" content="<?php echo $OG_TITLE; ?>" />
+      <meta name="twitter:description" content="<?php echo $OG_DESCRIPTION; ?>" />
+      <meta name="twitter:image" content="<?php echo $OG_IMAGE; ?>" />
       <?php } ?>
       <link href="assets/img/favicon.png" rel="shortcut icon">
       <!-- <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'> -->
@@ -241,72 +821,25 @@
       <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	  <link href="assets/css/select2.min.css" rel="stylesheet" />
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/css/intlTelInput.css"/>
-<style>
-.iti-phone-input {
-width: 100%;
-padding: 10px;
-box-sizing: border-box;
-margin-top: 10px;
-}
-
-/* Make the intl-tel-input wrapper full width */
-.iti.iti--separate-dial-code {
-width: 100%;
-}
-.error{ color:red; }
-
-    
+	  <link href="assets/css/dev.css" rel="stylesheet" />
+	  
 	 
-	  .select2-container--default .select2-selection--single .select2-selection__rendered {
-		color: #444;
-		line-height: 36px;
-		background-color: #fff !important;
-		background-clip: padding-box !important;
-		border: 1px solid #ced4da !important;
-	}
-	.select2-container--default .select2-selection--single .select2-selection__rendered {
-		color: #444;
-		line-height: 38px!important;
-	}
-	.select2-container--default .select2-selection--single {
-		border: none!important;
-	}
-	  
-   .faq-section .accordion-item {
-     border: 1px solid #dee2e6;
-     margin-bottom: 10px;
-   }
-
-   .faq-section .accordion-button,
-   .faq-section .accordion-body {
-     font-family: "Mulish", sans-serif;
-     font-size: 16px;
-   }
-
-   .faq-section .accordion-button {
-     color: #106d91;
-     font-weight: 600;
-   }
-
-   .faq-section .accordion-button:not(.collapsed) {
-     background-color: #f5f9fb;
-     color: #106d91;
-     box-shadow: none;
-   }
-
-   .faq-section .accordion-button:focus {
-     box-shadow: none;
-   }
- </style>
-      
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+	  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.toolmansteels.com/#organization",
+        "name": "Toolman Special Steels",
+        "url": "https://www.toolmansteels.com",
+        "logo": "https://www.toolmansteels.com/assets/img/logo/tooman-logo.png",
+        "email": "indiatoolman@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/company/toolmanspecialsteels/",
+          "https://www.instagram.com/toolmanspecialsteels/",
+          "https://www.facebook.com/toolmanspecialsteels/"
+        ]
+      }
+      </script>
 	  <?php if($pageName == 'index.php'){ ?>
       <script type="application/ld+json">
          {
@@ -321,6 +854,71 @@ width: 100%;
          
          }
          
+      </script>
+	  <script type="application/ld+json">
+
+{
+
+  "@context": "https://schema.org",
+
+  "@type": "LocalBusiness",
+
+  "@id": "https://www.toolmansteels.com/#organization",
+
+  "name": "Toolman Special Steels Pvt. Ltd",
+
+  "alternateName": ["Toolman Steels", "Toolman Special Steels"],
+
+  "url": "https://www.toolmansteels.com",
+
+  "logo": "https://www.toolmansteels.com/assets/img/logo/tooman-logo.png",
+
+  "image": "https://www.toolmansteels.com/assets/img/logo/tooman-logo.png",
+
+  "description": "Manufacturer, supplier and exporter of high-speed steel, hot work steel, cold work steel, die blocks, and PM steel in India.",
+
+  "telephone": "+91-9815525326",
+
+  "email": "indiatoolman@gmail.com",
+
+  "address": {
+
+    "@type": "PostalAddress",
+
+    "streetAddress": "Opp. Ludhiana Airport, Sahnewal",
+
+    "addressLocality": "Ludhiana",
+
+    "addressRegion": "Punjab",
+
+    "postalCode": "141120",
+
+    "addressCountry": "IN"
+
+  },
+
+  "sameAs": [
+
+    "https://www.facebook.com/toolmanspecialsteels",
+
+    "https://www.linkedin.com/company/toolmanspecialsteels",
+
+    "https://www.instagram.com/toolmanspecialsteels"
+
+  ]
+
+}
+
+</script>
+      <?php } ?>
+      <?php if(isset($productSchema)){ ?>
+      <script type="application/ld+json">
+      <?php echo json_encode($productSchema, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+      </script>
+      <?php } ?>
+      <?php if(isset($staticSchema)){ ?>
+      <script type="application/ld+json">
+      <?php echo json_encode($staticSchema, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
       </script>
       <?php } ?>
    </head>

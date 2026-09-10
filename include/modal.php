@@ -1,4 +1,4 @@
- <?php
+<?php
  require_once('include/config.php');
  $counties = get_counties($conn ); 
  $state_options = get_state_options($conn,'101'); 
@@ -31,40 +31,51 @@
  ?>
  
  <?php if(!empty($faqs)) { ?>
- <div class="mb-5">
+ <div class="mb-5" id="faq" style="scroll-margin-top: 120px;">
    <h3 class="mt-4 product-detail-sub-heading">Frequently Asked Questions</h3>
-   <?php foreach ($faqs as $index => $faq) { $collapseId = 'd3FaqAnswer' . $index; $headingId = 'd3FaqHeading' . $index; ?>
-   <div class="accordion-item">
-     <h2 class="accordion-header" id="<?php echo $headingId; ?>">
-       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $collapseId; ?>" aria-expanded="false" aria-controls="<?php echo $collapseId; ?>">
-         <?php echo $faq['question']; ?>
-       </button>
-     </h2>
-     <div id="<?php echo $collapseId; ?>" class="accordion-collapse collapse" aria-labelledby="<?php echo $headingId; ?>" data-bs-parent="#d3FaqAccordion">
-       <div class="accordion-body">
-         <?php echo $faq['answer']; ?>
-       </div>
-     </div>
-   </div>
-   <?php } ?>
 
-   <div class="accordion faq-section" id="d<?php echo $faq['id']; ?>FaqAccordion">
+   <style>
+     .faq-section .accordion-item {
+       border: 1px solid #dee2e6;
+       margin-bottom: 10px;
+     }
+     .faq-section .accordion-button,
+     .faq-section .accordion-body {
+       font-family: "Mulish", sans-serif;
+       font-size: 16px;
+     }
+     .faq-section .accordion-button {
+       color: #106d91;
+       font-weight: 600;
+     }
+     .faq-section .accordion-button:not(.collapsed) {
+       background-color: #f5f9fb;
+       color: #106d91;
+       box-shadow: none;
+     }
+     .faq-section .accordion-button:focus {
+       box-shadow: none;
+     }
+   </style>
+
+   <div class="accordion faq-section" id="productFaqAccordion">
+     <?php foreach ($faqs as $index => $faq) { $collapseId = 'faqAnswer' . $index; $headingId = 'faqHeading' . $index; ?>
      <div class="accordion-item">
-       <h2 class="accordion-header" id="d3FaqHeadingOne">
-         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#d3FaqAnswerOne" aria-expanded="false" aria-controls="d3FaqAnswerOne">
-           What is D3 tool steel, and what are its main advantages for manufacturers?
+       <h2 class="accordion-header" id="<?php echo $headingId; ?>">
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $collapseId; ?>" aria-expanded="false" aria-controls="<?php echo $collapseId; ?>">
+           <?php echo $faq['question']; ?>
          </button>
        </h2>
-       <div id="d3FaqAnswerOne" class="accordion-collapse collapse" aria-labelledby="d3FaqHeadingOne" data-bs-parent="#d3FaqAccordion">
+       <div id="<?php echo $collapseId; ?>" class="accordion-collapse collapse" aria-labelledby="<?php echo $headingId; ?>" data-bs-parent="#productFaqAccordion">
          <div class="accordion-body">
-           <p>We manufacture D3 / DIN 1.2080 / AISI D3 as a high-carbon, high-chromium cold work tool steel. Its main characteristics include superior wear resistance, high compressive strength, good dimensional stability, deep-hardening response, fine grain size, uniform carbide distribution and good cleanliness. It hardens with only a slight dimensional change, which is important for precision tooling.</p>
+           <?php echo $faq['answer']; ?>
          </div>
        </div>
      </div>
-
+     <?php } ?>
    </div>
-
-   <?php } ?>
+ </div>
+ <?php } ?>
 
    <div class="row">
      <div class="col-12 text-center pb-5">
