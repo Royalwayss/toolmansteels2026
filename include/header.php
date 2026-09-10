@@ -821,7 +821,8 @@
       <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	  <link href="assets/css/select2.min.css" rel="stylesheet" />
-	  <link href="assets/css/dev.css" rel="stylesheet" />
+	  <link href="assets/css/dev.css?v2=1" rel="stylesheet" />
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.3.5/css/intlTelInput.css">
 	  
 	 
 	  <script type="application/ld+json">
@@ -921,6 +922,7 @@
       <?php echo json_encode($staticSchema, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
       </script>
       <?php } ?>
+	  
    </head>
 <!--   <div class="preloader">-->
 
