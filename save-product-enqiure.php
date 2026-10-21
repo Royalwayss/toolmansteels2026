@@ -123,6 +123,48 @@ if(isset($data['city']) && $data['city'] != ''){
 
 
 
+	if($_SERVER['HTTP_HOST'] != 'localhost'){
+		if(!empty($_POST)){
+			$recaptcha_secret = SECRET_KEY;
+			$recaptcha_response = $_POST['g-recaptcha-response'];
+
+			$url = 'https://www.google.com/recaptcha/api/siteverify';
+			$res_data = [
+			'secret' => $recaptcha_secret,
+			'response' => $recaptcha_response
+			];
+
+			$options = [
+			'http' => [
+			'method' => 'POST',
+			'content' => http_build_query($res_data)
+			]
+			];
+
+			$context = stream_context_create($options);
+			$result = file_get_contents($url, false, $context);
+			$json = json_decode($result);
+
+			if ($json->success) {
+
+			} else { 
+				$err = 1;
+			} 
+		}
+	}
+		  
+		  
+
+
+
+
+
+
+
+
+
+
+
 if($err == ''){ 
           
 		  $product_name = $data['product_name'];
